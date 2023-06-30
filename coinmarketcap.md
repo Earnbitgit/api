@@ -119,7 +119,7 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/assets' -H "accept: application/
 GET /api/cmc/v1/ticker
 ```
 ```java
-curl -X GET 'https://api.earnbit.com /api/cmc/v1/ticker' -H "accept: application/json"
+curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/json"
 ```
 
 **Response Parameters:**
