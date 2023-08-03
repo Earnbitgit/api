@@ -138,6 +138,8 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
 ```javascript
  {
     "BTC_USDT": {
+        "base_id": "1027",
+        "quote_id": "1",
         "last_price": "1",
         "quote_volume": "0",
         "base_volume": "0",
