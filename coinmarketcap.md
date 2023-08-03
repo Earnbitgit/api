@@ -88,20 +88,26 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/assets' -H "accept: application/
 | max_withdraw | decimal | Recommended |
 | maker_fee | decimal | Recommended |
 | taker_fee | decimal | Recommended |
+| contractAddressUrl | string | Recommended |
+| contractAddress | string | Recommended |
 
 **Response**
 
 ```javascript
 {
-    "KNC": {
-        "name": "Kyber Network",
-        "can_withdraw": true,
-        "can_deposit": true,
-        "min_withdraw": 0.000000000000000000,
-        "max_withdraw": 0.000000000000000000,
-        "maker_fee": 0.002,
-        "taker_fee": 0.002
+    "SKL": {
+        "name":"Skale",
+        "unified_cryptoasset_id":5691,
+        "can_withdraw":true,
+        "can_deposit":true,
+        "min_withdraw":0.000000000000000000,
+        "max_withdraw":0.000000000000000000,
+        "maker_fee":0.002,
+        "taker_fee":0.002,
+        "contractAddressUrl":"https://etherscan.io/token/0x00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "contractAddress":"0x00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     },
+
     {
      ...
     }
