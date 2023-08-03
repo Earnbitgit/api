@@ -4,7 +4,7 @@
 
 | Name | Category | Status | Description |
 | ------ | ------ | ------ | ------ |
-| Summary Endpoint | **[Summary](#summary-endpoint)** | Mandatory | Overview of market data for all tickers and all markets |
+| Summary Endpoint | **[Summary](#summary-endpoint)** | Mandatory | Overview of market data for all tickers and all markets. |
 | Endpoint A1 | **[Assets](#assets-endpoint)** | Recommended | In depth details on crypto currencies available on the exchange. |
 | Endpoint A2| **[Ticker](#ticker-endpoint)** | Mandatory | 24-hour rolling window price change statistics for all markets. |
 | Endpoint A3| **[Orderbook](#orderbook-endpoint)** | Mandatory | Market depth of a trading pair. One array containing a list of ask prices and another array containing bid prices. Query for level 2 order book with full depth available as minimum requirement. |
@@ -131,7 +131,7 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
 | last_price | decimal | Mandatory |
 | base_volume | decimal | Mandatory |
 | quote_volume | decimal | Mandatory |
-| is_frozen | decimal | Recommended |
+| isFrozen | decimal | Recommended |
 
 
 **Response:**
@@ -141,7 +141,7 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
         "last_price": "1",
         "quote_volume": "0",
         "base_volume": "0",
-        "is_frozen": 0
+        "isFrozen": 0
     },
     {
       ...
@@ -173,8 +173,8 @@ curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT" -H "accept: 
 **Response Parameters:**
 | Name | Type | Status | Description |
 | ------ | ------ | ------ |  ------ |
-| timestamp | integer | Mandatory | Unix timestamp in milliseconds for when the last updated time occurred |
-| bids | decimal | Mandatory | An array containing 2 elements. The offer price and quantity for each bid order |
+| timestamp | integer | Mandatory | Unix timestamp in milliseconds for when the last updated time occurred. |
+| bids | decimal | Mandatory | An array containing 2 elements. The offer price and quantity for each bid order. |
 | asks | decimal | Mandatory | An array containing 2 elements. The ask price and quantity for each ask order. |
 
 **Response:**
