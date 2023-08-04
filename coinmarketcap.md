@@ -134,22 +134,22 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
 | ------ | ------ | ------ |
 | base_id | integer | Recommended |
 | quote_id | integer | Recommended |
-| last_price | decimal | Mandatory |
-| base_volume | decimal | Mandatory |
-| quote_volume | decimal | Mandatory |
-| isFrozen | decimal | Recommended |
+| last_price | string | Mandatory |
+| base_volume | string | Mandatory |
+| quote_volume | string | Mandatory |
+| isFrozen | integer | Recommended |
 
 
 **Response:**
 ```javascript
  {
     "BTC_USDT": {
-        "base_id": "1027",
-        "quote_id": "1",
-        "last_price": "1",
-        "quote_volume": "0",
-        "base_volume": "0",
-        "isFrozen": 0
+        "base_id":1,
+        "quote_id":825,
+        "last_price":"29234.07024068",
+        "quote_volume":"3721840.696252500283",
+        "base_volume":"127.4487141",
+        "isFrozen":0
     },
     {
       ...
@@ -165,10 +165,10 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
   </summary>
 
 ```java
-GET /api/cmc/v1/orderbook/{market_pair}
+GET /api/cmc/v1/orderbook/{market_pair}?depth={depth}&level={level}
 ```
 ```java
-curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT" -H "accept: application/json"
+curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT](https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT?depth=100&level=2)" -H "accept: application/json"
 ```
 
 **Request Parameters**
@@ -182,13 +182,13 @@ curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT" -H "accept: 
 | Name | Type | Status | Description |
 | ------ | ------ | ------ |  ------ |
 | timestamp | integer | Mandatory | Unix timestamp in milliseconds for when the last updated time occurred. |
-| bids | decimal | Mandatory | An array containing 2 elements. The offer price and quantity for each bid order. |
-| asks | decimal | Mandatory | An array containing 2 elements. The ask price and quantity for each ask order. |
+| bids | string | Mandatory | An array containing 2 elements. The offer price and quantity for each bid order. |
+| asks | string | Mandatory | An array containing 2 elements. The ask price and quantity for each ask order. |
 
 **Response:**
 ```javascript
  {
-   "timestamp":"1585177482652",
+   "timestamp": 1585177482652,
    "bids":[
       [
          "12462000",
@@ -251,7 +251,7 @@ curl -X GET "https://api.earnbit.com/api/cmc/v1/trades/BTC_USDT" -H "accept: app
         "base_volume": 0.002487,
         "quote_volume": 108.19659805,
         "trade_id": 171663170,
-        "timestamp": 1644584940
+        "timestamp": 1691135996866
     },
     {
      ...
