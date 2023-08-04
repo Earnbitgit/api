@@ -168,7 +168,7 @@ curl -X GET 'https://api.earnbit.com/api/cmc/v1/ticker' -H "accept: application/
 GET /api/cmc/v1/orderbook/{market_pair}?depth={depth}&level={level}
 ```
 ```java
-curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT](https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT?depth=100&level=2)" -H "accept: application/json"
+curl -X GET "https://api.earnbit.com/api/cmc/v1/orderbook/BTC_USDT?depth=100&level=2" -H "accept: application/json"
 ```
 
 **Request Parameters**
