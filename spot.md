@@ -65,9 +65,9 @@
   <summary> </summary>
   Follow 5 simple steps to use private methods:
 
-  * Before authorization, you need to log in to https://earnit.com/login or register if the user has not yet been created https://earnit.com/register.
-  * After authorization, you need to go to https://earnit.com/user/security-main and activate 2-factor authentication.
-  * After enabling 2-factor authentication, you need to go to the API manager to create API keys that will be required for authorization in the API https://earnit.com/user/api.
+  * Before authorization, you need to log in to https://earnbit.com/login or register if the user has not yet been created https://earnbit.com/register.
+  * After authorization, you need to go to https://earnbit.com/user/security-main and activate 2-factor authentication.
+  * After enabling 2-factor authentication, you need to go to the API manager to create API keys that will be required for authorization in the API https://earnbit.com/user/api.
   * To create keys, click Add Key and the 1st package of keys for connecting the API will be created. Key packages can be up to 5 pieces.
   * Before using the apkey, they must be activated - for this, on the created package, click on the switch which will switch them to the "Active" state.
 
@@ -102,7 +102,7 @@
       $apiKey = '';
       $apiSecret = '';
   		$request = ''; // /api/v1/order/new
-      $baseUrl = 'https://api.earnit.com';
+      $baseUrl = 'https://api.earnbit.com';
 
       $data = [
           'request' => $request,
@@ -570,7 +570,7 @@ change | STRING |
 GET /api/v1/public/book
 ```
 ```java
-curl -X GET "https://api.earnit.com/api/v1/public/book?market=BTC_USDT&side=sell&offset=0&limit=1" -H "accept: application/json"
+curl -X GET "https://api.earnbit.com/api/v1/public/book?market=BTC_USDT&side=sell&offset=0&limit=1" -H "accept: application/json"
 ```
 
 **Request Parameters:**
